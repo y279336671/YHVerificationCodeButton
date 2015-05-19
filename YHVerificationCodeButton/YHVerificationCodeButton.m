@@ -44,6 +44,9 @@
 
 -(void)fetchCode:(id)sender
 {
+    if ([self.delegate respondsToSelector:@selector(fetchCode)]) {
+         [self.delegate fetchCode];
+    }
     [self updateTime];
 }
 
