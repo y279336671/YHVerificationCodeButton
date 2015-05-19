@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol YHVerificationCodeButtonDelegate<NSObject>
+@required
+-(void)fetchCode;
+@end
+
 @interface YHVerificationCodeButton : UIView
 @property(nonatomic,assign)int timeout;
 @property(nonatomic,strong)UIColor *normalColor;
